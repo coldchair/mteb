@@ -4110,3 +4110,26 @@ BRIGHT_PRO = Benchmark(
 }
 """,
 )
+
+CPRET = Benchmark(
+    name="CPRet",
+    display_name="CPRet",
+    tasks=get_tasks(
+        tasks=[
+            "CPRetT2CRetrieval",
+            "CPRetC2CRetrieval",
+            "CPRetP2DupRetrieval",
+            "CPRetS2FullRetrieval",
+        ],
+        eval_splits=["test"],
+    ),
+    description=(
+        "Competitive programming retrieval across text-to-code, code-to-code, "
+        "problem-to-duplicate, and simplified-to-full problem retrieval. "
+        "Each task uses only its test corpus, queries, and original relevance "
+        "judgments, with nDCG@10 as the main score. Training-pair configs and "
+        "the raw PCPCD dataset are excluded."
+    ),
+    reference="https://arxiv.org/abs/2505.12925",
+    citation=get_task("CPRetT2CRetrieval").metadata.bibtex_citation,
+)

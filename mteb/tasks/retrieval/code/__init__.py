@@ -20,6 +20,12 @@ from .coreb_retrieval import (
     CorebT2CRetrieval,
 )
 from .cos_qa_retrieval import CosQARetrieval
+from .cpret_retrieval import (
+    CPRetC2CRetrieval,
+    CPRetP2DupRetrieval,
+    CPRetS2FullRetrieval,
+    CPRetT2CRetrieval,
+)
 from .ds1000_retrieval import DS1000Retrieval
 from .fresh_stack_retrieval import FreshStackRetrieval
 from .human_eval_retrieval import HumanEvalRetrieval
@@ -33,6 +39,10 @@ from .wiki_sql_retrieval import WikiSQLRetrieval
 __all__ = [
     "AppsRetrieval",
     "COIRCodeSearchNetRetrieval",
+    "CPRetC2CRetrieval",
+    "CPRetP2DupRetrieval",
+    "CPRetS2FullRetrieval",
+    "CPRetT2CRetrieval",
     "Code1Retrieval",
     "CodeEditSearchRetrieval",
     "CodeFeedbackMT",
